@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_contracts" model="ir.actions.act_window">
+        <field name="name">Contracts</field>
+        <field name="res_model">contracts.contract</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_payment_wizard" model="ir.actions.act_window">
+        <field name="name">Make Payment</field>
+        <field name="res_model">contracts.payment.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="menu_contracts_root" name="Contracts" sequence="10"/>
+    <menuitem id="menu_contracts" parent="menu_contracts_root" action="action_contracts" sequence="10"/>
+</odoo>
